@@ -1,5 +1,5 @@
 name: 'ist722dbt'
-version: '1.0.0'
+version: '1.0'
 config-version: 2
 
 profile: 'default'
@@ -18,4 +18,5 @@ clean-targets:
 
 models:
   ist722dbt:
-    +materialized: view
+    example:
+      +materialized: view
