@@ -17,6 +17,7 @@ clean-targets:
   - "dbt_packages"
 
 models:
-  ist722dbt:
-    example:
-      +materialized: view
+  jaffle_shop:
+    +materialized: table
+  example:
+    +materialized: view
