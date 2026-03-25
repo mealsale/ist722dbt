@@ -20,4 +20,4 @@ clean-targets:
   northwind:
     +materialized: table
     database: analytics
-    +schema: northwind
+    +schema: northwind;
