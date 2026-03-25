@@ -1,4 +1,4 @@
-name: 'northwind'
+name: 'ist722dbt'
 version: '1.0'
 config-version: 2
 
@@ -16,8 +16,6 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-  models:
-  northwind:
-    +materialized: table
-    database: analytics
-    +schema: northwind;
+models:
+  jaffle_shop:
+    +materialized: table 
