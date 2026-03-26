@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_date
+    description: Date Dimension. One row per date
+    columns:
+      - name: datekey
+        description: The surrogate key of the date in YYYYMMDD format
+        tests:
+          - not_null
+          - unique
+      - name: date
+        description: The actual date
+        tests:
+          - not_null
