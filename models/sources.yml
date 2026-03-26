@@ -1,10 +1,21 @@
+version: 2
+
 sources:
-  - name: jaffle_shop
-    description: This is a replica of the Postgres database used by our app
+  - name: conformed
     database: raw
-    schema: jaffle_shop
+    schema: conformed
+    tables:
+      - name: datedimension
+
+  - name: northwind
+    database: raw
+    schema: northwind
     tables:
       - name: customers
-        description: One record per customer.
+      - name: employees
       - name: orders
-        description: One record per order. Includes cancelled and deleted orders.
+      - name: order_details
+      - name: products
+      - name: categories
+      - name: suppliers
+      - name: shippers

@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: fact_order_fulfillment
+    description: Order fulfillment fact table. One row per order.
+    columns:
+      - name: orderid
+        description: The business key of the order
+        tests:
+          - not_null
+          - unique
+      - name: employeekey
+        description: Employee dimension surrogate key
+      - name: customerkey
+        description: Customer dimension surrogate key
+      - name: orderdatekey
+        description: role play Order Date dimension key for dim_date
+      - name: requireddatekey
+        description: role play Required Date dimension key for dim_date
+      - name: shippeddatekey
+        description: role play Shipped Date dimension key for dim_date
+      - name: quantityonorder
+        description: additive fact for total quantity of product sold on order
+      - name: totalorderamount
+        description: additive fact for total amount of product on order quantity * product price - discount
+      - name: daysfromordertoshipped
+        description: the number of days elapsed from order to shipped
+      - name: daysfromordertorequired
+        description: the number of days before the order is required
+      - name: shippedtorequireddelta
+        description: the difference between shipped and required. positive means shipment was late.
+      - name: shippedontime
+        description: yes or no was the shipment on time
